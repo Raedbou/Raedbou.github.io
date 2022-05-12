@@ -15,7 +15,7 @@ Next you can update your site name, avatar and other options using the _config.y
 
 You can turn parallel sections to tabs in `html_document` output.
 
-## Results {.tabset}
+## Results {.tabset .tabset-fade .tabset-pills}
 
 ### Plots
 
@@ -24,7 +24,7 @@ We show a scatter plot in this section.
 
 ### Tables
 
-## {-}
+### {-}
 
 
 ### Neural Operator Methods
