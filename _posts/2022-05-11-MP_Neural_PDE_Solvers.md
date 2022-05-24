@@ -5,7 +5,7 @@ published: true
 ---
 ![_config.yml]({{ site.baseurl }}/images/MP-PDE-Solver.png)
 
-<p>  <div style="text-align: justify"> ***This blog post is based on the paper: Brandstetter, Johannes, Daniel Worrall, and Max Welling. "Message passing neural PDE solvers." arXiv preprint arXiv:2202.03376 (2022).*** </div> </p>
+<p>  <div style="text-align: justify"> <em> This blog post is based on the paper: Brandstetter, Johannes, Daniel Worrall, and Max Welling. "Message passing neural PDE solvers." arXiv preprint arXiv:2202.03376 (2022).  </em> </div> </p>
 
 
 ## Introduction: Why Deep Learning for physics simulations?
