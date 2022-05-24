@@ -5,7 +5,7 @@ published: true
 ---
 ![_config.yml]({{ site.baseurl }}/images/MP-PDE-Solver.png)
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below) Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below) Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below) Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below) Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below) Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+Many problems in science and engineering are described using Partial Differential Equations (PDE). Most PDEs described real world problems require numerical solutions. For large problems the numerical solutions are computationally expensive. Well established methods to solve PDEs are the Finite Difference Method (FDM), Finite Volume Method (FVM) and Finite Element Method (FEM). These methods require a fine spatial discretization of the computational domains and get very slow and inefficient.
 
 ## Why Deep Learning for Physics Simulations?
 
