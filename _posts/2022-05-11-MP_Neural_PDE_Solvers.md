@@ -13,7 +13,7 @@ published: true
 
 Many problems in physics and engineering can be described using PDEs. For an arbitrary problem the PDE can be written as
 $$
-\frac{\partial \mathbf{u}}{\partial t } = L(u,t)
+\frac{\partial \mathbf{u}}{\partial t } = \mathcal{F}(t, \mathbf{u}, x, \frac{\partial{\mathbf{u}}{\partial \mathbf{x}}} )
 $$
 
 
