@@ -15,8 +15,8 @@ Many problems in physics and engineering can be described using PDEs. For an arb
 
 ![_config.yml]({{ site.baseurl }}/images/PDE.png){: .align-center}
 
-
 with the initial and boundary conditions 
+
 ![_config.yml]({{ site.baseurl }}/images/initial_condition.png){: .align-center}
 
 <p>  <div style="text-align: justify">
