@@ -13,7 +13,9 @@ published: true
 
 Many problems in physics and engineering can be described using PDEs. For an arbitrary problem the PDE can be written as
 
+{:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/PDE.png){: .align-center}
+{: refdef}
 
 with the initial and boundary conditions 
 
