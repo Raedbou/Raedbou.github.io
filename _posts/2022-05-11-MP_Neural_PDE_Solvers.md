@@ -15,7 +15,7 @@ Many problems in physics and engineering can be described using PDEs. For an arb
 
 When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are 
 $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
-$$ a =1 $$ \frac{\partial \mathbf{u}}{\partial t } = \mathcal{F}(t, \mathbf{u}, x, \frac{\partial{\mathbf{u}}}{\partial \mathbf{x}}, 
+$$  \frac{\partial \mathbf{u}} \over {\partial t } = \mathcal{F}(t, \mathbf{u}, x, {\partial{\mathbf{u}}} \over {\partial \mathbf{x}}, 
 \frac{\partial{^2 \mathbf{u}}}{\partial \mathbf{x^2}}, ...) $$
 
 with the initial and boundary conditions
