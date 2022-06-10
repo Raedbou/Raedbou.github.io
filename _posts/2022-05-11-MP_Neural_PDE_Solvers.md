@@ -13,14 +13,11 @@ published: true
 
 Many problems in physics and engineering can be described using PDEs. For an arbitrary problem the PDE can be written as
 
-<p align="center">
 ![_config.yml]({{ site.baseurl }}/images/PDE.png)
- </p>
+
 
 with the initial and boundary conditions 
-<p align="center">
 ![_config.yml]({{ site.baseurl }}/images/initial_condition.png)
- </p>
 
 <p>  <div style="text-align: justify">
 In simple words: The evolution of a variable state in time is described by the value of the variable at a given time and its spatial derivatives.
@@ -32,15 +29,15 @@ To motivate the need to predict the solutions of PDEs it is helpful to have a lo
 Let's have a look at the advection euqation (a PDE of hyperbolic type). The advection equation models how a quantity is transported in space: Examples include the wave propagation of a tsunami (The shalow water equation), the contaminant transport in a river by fluid motion... In the following video you can see how the numerical solution of the shallow water euqation describes the propagation of a wave in a fluid with reflective boundary conditions. 
 The above mentionned problems take only a couple of second to solve for one initial parameter. If you think if real world problems, these are usually a lot larger and are not one dimensional. Thus simulations are computationally expensive and the resulting output is also very high dimensional. We usually talk about several million values (nodes) for each timestep. This doesn't seem large enough? Here are two of the largest  numerical simulations of PDEs ever produced:
 </div> </p>
-<p align="center">
+
 ![_config.yml]({{ site.baseurl }}/images/turbulence_showcase.png)
 2) https://arxiv.org/pdf/1607.00630.pdf
- </p>
+ 
 
- <p align="center">
+ 
 ![_config.yml]({{ site.baseurl }}/images/space_showcase.jpg)
 1) https://singularityhub.com/2021/09/17/the-biggest-simulation-of-the-universe-yet-stretches-back-to-the-big-bang/
- </p>
+ 
 
 
 Now that I assume this digression thrilled you and that you recognize the urge for efficient prediction methods for simulations, we go back to theory and let's talk Machine Learning 
