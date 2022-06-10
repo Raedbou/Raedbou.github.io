@@ -13,12 +13,15 @@ published: true
 
 Many problems in physics and engineering can be described using PDEs. For an arbitrary problem the PDE can be written as
 
+<p align="center">
 ![_config.yml]({{ site.baseurl }}/images/PDE.png)
+ </p>
 
 with the initial and boundary conditions 
-
+<p align="center">
 ![_config.yml]({{ site.baseurl }}/images/initial_condition.png)
-
+ </p>
+ 
 In simple words: The evolution of a variable state in time is described by the value of the variable at a given time and its spatial derivatives.
 An example of a PDE is the heat equation. The heat equation describes how quantities (such as heat) diffuse through a given region. To solve the PDE describing the problem using classical numerical methods (FEM, FVM; FDM...) an initial condition describing the disctribution of the temperature at time t=0 has to be provided. The spatial derivatives are then approximated using discretization schemes and the time derivatives are computed using time stepping schemes such as the Euler method or the Runge Kutta (RK) method. In the following we illustrate the solution of the heat equation with two different initial conditions for multiple time steps.
 
