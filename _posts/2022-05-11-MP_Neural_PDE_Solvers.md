@@ -28,7 +28,7 @@ An example of a PDE is the heat equation. The heat equation describes how quanti
 </div> </p>
 
 {:refdef: style="text-align: center;"}
-![_config.yml]({{ site.baseurl }}/images/diffusion.png){: .align-center}
+![_config.yml]({{ site.baseurl }}/images/diffusion_PDE.png){: .align-center}
 {: refdef}
 
 <p>  <div style="text-align: justify">
