@@ -28,17 +28,19 @@ An example of a PDE is the heat equation. The heat equation describes how quanti
 </div> </p>
 
 {:refdef: style="text-align: center;"}
-![_config.yml]({{ site.baseurl }}/images/Diffusion.png){: .align-center}
+![_config.yml]({{ site.baseurl }}/images/diffusion.png){: .align-center}
 {: refdef}
 
 <p>  <div style="text-align: justify">
 To motivate the need to predict the solutions of PDEs it is helpful to have a look at another type of PDEs to illustrate the variety of problems they describe. Looking at different types of PDEs will be helpful later during the discussion of the paper, where you will see the importance of ML algorithms that can generalize to different PDE types.
 Let's have a look at the advection euqation (a PDE of hyperbolic type). The advection equation models how a quantity is transported in space: Examples include the wave propagation of a tsunami (The shalow water equation), the contaminant transport in a river by fluid motion... In the following video you can see how the numerical solution of the shallow water euqation describes the propagation of a wave in a fluid with reflective boundary conditions. 
-  
+</div> </p>
+
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/ShallowWater_PDE.png){: .align-center}
 {: refdef}  
 
+<p>  <div style="text-align: justify">
 The above mentionned problems take only a couple of second to solve for one initial parameter. If you think if real world problems, these are usually a lot larger and are not one dimensional. Thus simulations are computationally expensive and the resulting output is also very high dimensional. We usually talk about several million values (nodes) for each timestep. This doesn't seem large enough? Here are two of the largest  numerical simulations of PDEs ever produced:
 </div> </p>
 
