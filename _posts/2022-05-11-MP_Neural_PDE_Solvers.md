@@ -13,7 +13,8 @@ published: true
 
 Many problems in physics and engineering can be described using PDEs. For an arbitrary problem the PDE can be written as
 
-image here
+When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are 
+$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
 with the initial and boundary conditions
 
