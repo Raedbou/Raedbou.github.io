@@ -57,7 +57,7 @@ The above mentionned problems take only a couple of second to solve for one init
 
 1) https://singularityhub.com/2021/09/17/the-biggest-simulation-of-the-universe-yet-stretches-back-to-the-big-bang/
 
-Now that I assume this digression thrilled you and that you recognize the urge for efficient prediction methods for simulations, we go back to theory and let's talk Machine Learning 
+Now that I assume this digression thrilled you and that you recognize the urge for efficient prediction methods for simulations, we dive back into theory and have a look at some ML concepts. 
 ## Deep Learning
 ### Deep Learning and Artificial Neural Networks
 here we introduce briefly ANNs and DL 
