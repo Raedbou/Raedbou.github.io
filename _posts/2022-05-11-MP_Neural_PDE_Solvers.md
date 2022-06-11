@@ -45,14 +45,14 @@ The above mentionned problems take only a couple of second to solve for one init
 </div> </p>
 
 {:refdef: style="text-align: center;"}
-![_config.yml]({{ site.baseurl }}/images/turbulence_showcase.png){: .align-center}{ width: 200px; }
+![_config.yml]({{ site.baseurl }}/images/turbulence_showcase.png){: .align-center}
 {: refdef}
 
 2) https://arxiv.org/pdf/1607.00630.pdf
 
 
 {:refdef: style="text-align: center;"} 
-![_config.yml]({{ site.baseurl }}/images/space_showcase.jpg){: .align-center}{ width: 200px; }
+![_config.yml]({{ site.baseurl }}/images/space_showcase.jpg){: .align-center}
 {: refdef} 
 
 1) https://singularityhub.com/2021/09/17/the-biggest-simulation-of-the-universe-yet-stretches-back-to-the-big-bang/
