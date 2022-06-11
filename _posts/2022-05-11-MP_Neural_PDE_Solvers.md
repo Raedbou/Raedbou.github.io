@@ -54,7 +54,7 @@ The above mentionned problems take only a couple of second to solve for one init
 Now that I assume this digression thrilled you and that you recognize the urge for efficient prediction methods for simulations, we dive back into theory and have a look at some DL concepts. 
 
 ## How does Deep Learning work?
-Deep Leaning is a category of machine learning designed to predict an output $Y$ based on an input $X$. The basic model used in Deep Learning are Artificial Neural Networks. Artificial Neural Netowrks learn patterns between $X$ and $Y$ and use those patterns to predict output for new unseen input variables $X$. They can be viewed as weighted directed graphs
+Deep Leaning is a category of machine learning designed to predict an output $$ Y $$ based on an input $$ X $$. The basic model used in Deep Learning are Artificial Neural Networks. Artificial Neural Netowrks learn patterns between $$ X $$ and $$ Y $$ and use those patterns to predict output for new unseen input variables $$ X $$. They can be viewed as weighted directed graphs
 
 
 ### Deep Learning and Artificial Neural Networks
