@@ -46,16 +46,16 @@ The above mentionned problems take only a couple of second to solve for one init
 
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/turbulence_showcase.png){: .align-center}
+{: refdef}
 
 2) https://arxiv.org/pdf/1607.00630.pdf
-{: refdef}
+
 
 {:refdef: style="text-align: center;"} 
 ![_config.yml]({{ site.baseurl }}/images/space_showcase.jpg){: .align-center}
-
-1) https://singularityhub.com/2021/09/17/the-biggest-simulation-of-the-universe-yet-stretches-back-to-the-big-bang/
 {: refdef} 
 
+1) https://singularityhub.com/2021/09/17/the-biggest-simulation-of-the-universe-yet-stretches-back-to-the-big-bang/
 
 Now that I assume this digression thrilled you and that you recognize the urge for efficient prediction methods for simulations, we go back to theory and let's talk Machine Learning 
 ## Deep Learning
