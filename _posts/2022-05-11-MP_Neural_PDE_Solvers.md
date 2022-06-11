@@ -57,7 +57,7 @@ Now that I assume this digression thrilled you and that you recognize the urge f
 Deep Leaning is a category of machine learning designed to predict an output Y  based on an input X. The basic model used in Deep Learning are Artificial Neural Networks. Artificial Neural Netowrks learn patterns between X and Y and use those patterns to predict output for new unseen input variables X. They can be viewed as weighted directed graphs. In Artificial Neural Networks the nodes are called neurons and the weighted edges are called connections. An Artificial Neural Network receives an input X,eg. Vector, Matrix... and the elements of the inputs are multiplied each by the weight of the connection it is connected with. All the weighted sums are respectively summed up at a neuron that is connected to the input nodes and the weighted sum is passed to a function called the activation function. The activation function maps the weighted sum to the output variables. This results in the following relation between input, output, weights w and activation function f.
 
 {:refdef: style="text-align: center;"}
-![_config.yml]({{ site.baseurl }}/images/Preceptron.png){: .align-center}
+![_config.yml]({{ site.baseurl }}/images/Perceptron.png){: .align-center}
 {: refdef}
 
 When an Artificial Neural Network has more then one layer of neurons between the input and the output we speak of Multilayer Perceptrons. In the case of the example below imagine how the information is passed from left to right (from input to output) throughout the layers: The network is called a Feedforward Network.
