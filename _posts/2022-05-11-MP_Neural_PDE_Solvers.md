@@ -47,9 +47,8 @@ The above mentionned problems take only a couple of second to solve for one init
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/Showcase_PDE.jpg){: .align-center}
 {: refdef}
-<p align=center>  
-[(**left**)](https://arxiv.org/pdf/1607.00630.pdf)Largest turbulence simulation: 1.014e+12 degrees of freedom on 65000 cores. ([Video])[https://www.mso.anu.edu.au/~chfeder/pubs/sonic_scale/Federrath_sonic_scale_lowres.mp4] [(**Right**)](https://www.nao.ac.jp/en/news/science/2021/20210910-cfca.html) Largest simulation of the uBig Bang: 2.1e+12 particles on 40200 cores. ([Video])(https://www.youtube.com/watch?time_continue=3&v=R7nV6JEMGAo&feature=emb_title)
-</p>
+[**(left)**](https://arxiv.org/pdf/1607.00630.pdf) Largest turbulence simulation: 1.014e+12 degrees of freedom on 65000 cores. [Video](https://www.mso.anu.edu.au/~chfeder/pubs/sonic_scale/Federrath_sonic_scale_lowres.mp4)
+[**(Right)**](https://www.nao.ac.jp/en/news/science/2021/20210910-cfca.html) Largest simulation of the uBig Bang: 2.1e+12 particles on 40200 cores. ([Video])(https://www.youtube.com/watch?time_continue=3&v=R7nV6JEMGAo&feature=emb_title)
 
 <p>  <div style="text-align: justify">
 Now that I assume this digression thrilled you and that you recognize the urge for efficient prediction methods for simulations, we dive back into theory and have a look at some DL concepts. 
