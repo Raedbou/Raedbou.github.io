@@ -53,7 +53,9 @@ The above mentionned problems take only a couple of second to solve for one init
 <p>  <div style="text-align: justify">
 Now that I assume this digression thrilled you and that you recognize the urge for efficient prediction methods for simulations, we dive back into theory and have a look at some DL concepts. 
 </div> </p>
+
 ## Deep Learning basics
+
 ### Artificial Neural Networks
   <p>  <div style="text-align: justify">
 Deep Leaning is a category of machine learning designed to predict an output Y  based on an input X. The basic model used in Deep Learning are Artificial Neural Networks. Artificial Neural Netowrks learn patterns between X and Y and use those patterns to predict output for new unseen input variables X. They can be viewed as weighted directed graphs. In Artificial Neural Networks the nodes are called neurons and the weighted edges are called connections. An Artificial Neural Network receives an input X,eg. Vector, Matrix... and the elements of the inputs are multiplied each by the weight of the connection it is connected with. All the weighted sums are respectively summed up at a neuron that is connected to the input nodes and the weighted sum is passed to a function called the activation function. The activation function maps the weighted sum to the output variables. This results in the following relation between input, output, weights w and activation function f.
@@ -80,7 +82,7 @@ Here I link blog posts that I find very helpful in understanding some of the abo
   
   - [Optimization algorithms](https://towardsdatascience.com/understanding-optimization-algorithms-in-machine-learning-edfdb4df766b) ( and if you are more into reading papers, you might enjoy reading this [survey](https://arxiv.org/pdf/1906.06821.pdf))
 
-### Graph Neural Networks and Message Passing Neural Netorks
+### Graph Neural Networks and Message Passing Neural Networks
 The concept of graph embedding, aggregation and message passing.
 Many good resources to present this with graphs. Also from the main paper of the blog.
 
