@@ -47,7 +47,10 @@ The above mentionned problems take only a couple of second to solve for one init
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/Showcase_PDE.jpg){: .align-center}
 {: refdef}
-<p align=center>    a                                              b     </p>
+<p align=center>  
+| a       |      b |
+|---|---|
+</p>
 2) https://arxiv.org/pdf/1607.00630.pdf
 1) https://singularityhub.com/2021/09/17/the-biggest-simulation-of-the-universe-yet-stretches-back-to-the-big-bang/
 
