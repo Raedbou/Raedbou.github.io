@@ -62,7 +62,7 @@ Deep Leaning is a category of machine learning designed to predict an output Y  
 ![_config.yml]({{ site.baseurl }}/images/Perceptron.png){: .align-center}
 {: refdef}
 <p>  <div style="text-align: justify">
-When an Artificial Neural Network has more then one layer of neurons between the input and the output we speak of Multilayer Perceptrons. In the case of the example below imagine how the information is passed from left to right (from input to output as shown by the errors) throughout the layers: The network is called a Feedforward Network. The above shown relationship between input values, weights and activation function is applied at each node of each layer.
+When an Artificial Neural Network has more then one layer of neurons between the input and the output we speak of Multilayer Perceptrons. The first layer is the input layer, the last layer is the output layer and the layers in between are referred to as hidden layers. In the case of the example below imagine how the information is passed from left to right (from input to output as shown by the errors) throughout the layers: The network is called a Feedforward Network. The above shown relationship between input values, weights and activation function is applied at each node of each layer.
 </div> </p>
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/ANN.png){: .align-center}
