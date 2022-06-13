@@ -68,6 +68,15 @@ When an Artificial Neural Network has more then one layer of neurons between the
 ![_config.yml]({{ site.baseurl }}/images/ANN.png){: .align-center}
 {: refdef}
 
+<p>  <div style="text-align: justify">
+Similar to a linear regressor the task here is to find the optimal set of weights that best expresses the input/output dependencies. This is an opimisation task that can be solved by minimizing a loss function with respect to the weights. 
+
+Here I link blog posts that I find very helpful in understanding some of the above mentioned concepts and tools:
+  - ([**Activation functions**](https://towardsdatascience.com/everything-you-need-to-know-about-activation-functions-in-deep-learning-models-84ba9f82c253))
+  - ([**Loss functions**](https://towardsdatascience.com/everything-you-need-to-know-about-activation-functions-in-deep-learning-models-84ba9f82c253](https://towardsdatascience.com/common-loss-functions-in-machine-learning-46af0ffc4d23))
+  - ([**Optimization algorithms**](https://towardsdatascience.com/understanding-optimization-algorithms-in-machine-learning-edfdb4df766b)) and if you are more into reading papers, you might enjoy reading this ([**survey**](https://arxiv.org/pdf/1906.06821.pdf))
+</div> </p>
+
 
 ### Deep Learning and Artificial Neural Networks
 here we introduce briefly ANNs and DL 
