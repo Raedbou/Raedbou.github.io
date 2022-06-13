@@ -48,11 +48,8 @@ The above mentionned problems take only a couple of second to solve for one init
 ![_config.yml]({{ site.baseurl }}/images/Showcase_PDE.jpg){: .align-center}
 {: refdef}
 <p align=center>  
-| a       |      b |
-|---|---|
+[(**left**)](https://arxiv.org/pdf/1607.00630.pdf)Largest turbulence simulation: 1.014e+12 degrees of freedom on 65000 cores. ([Video])[https://www.mso.anu.edu.au/~chfeder/pubs/sonic_scale/Federrath_sonic_scale_lowres.mp4] [(**Right**)](https://www.nao.ac.jp/en/news/science/2021/20210910-cfca.html) Largest simulation of the uBig Bang: 2.1e+12 particles on 40200 cores. ([Video])(https://www.youtube.com/watch?time_continue=3&v=R7nV6JEMGAo&feature=emb_title)
 </p>
-2) https://arxiv.org/pdf/1607.00630.pdf
-1) https://singularityhub.com/2021/09/17/the-biggest-simulation-of-the-universe-yet-stretches-back-to-the-big-bang/
 
 <p>  <div style="text-align: justify">
 Now that I assume this digression thrilled you and that you recognize the urge for efficient prediction methods for simulations, we dive back into theory and have a look at some DL concepts. 
@@ -81,7 +78,7 @@ Here I link blog posts that I find very helpful in understanding some of the abo
   
   - [Loss functions](https://towardsdatascience.com/common-loss-functions-in-machine-learning-46af0ffc4d23)
   
-  - [Optimization algorithms](https://towardsdatascience.com/understanding-optimization-algorithms-in-machine-learning-edfdb4df766b) ( and if you are more into reading papers, you might enjoy reading this [**survey**](https://arxiv.org/pdf/1906.06821.pdf))
+  - [Optimization algorithms](https://towardsdatascience.com/understanding-optimization-algorithms-in-machine-learning-edfdb4df766b) ( and if you are more into reading papers, you might enjoy reading this [survey](https://arxiv.org/pdf/1906.06821.pdf))
 
 
 
