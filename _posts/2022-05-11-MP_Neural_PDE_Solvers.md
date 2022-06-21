@@ -91,6 +91,11 @@ Many real data cannot be respresented in a way that can be processed using ANNs 
   - In gas and fluid dynamics particles can seen as objects and the connections are distances between these particles and further material properties such as density and viscosity.
   - In molecular dynamics the objecs are atoms described by an atom type and connected by relative positions and edge types.  
 
+The objects in a graph are called nodes and the connections are edges. 
+
+{:refdef: style="text-align: center;"}
+![_config.yml]({{ site.baseurl }}/images/Graph.png){: .align-center}
+{: refdef}  
 
 
 
