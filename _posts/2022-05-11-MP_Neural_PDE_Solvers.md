@@ -96,7 +96,7 @@ The objects in a graph are called nodes and the connections are edges.
 ![_config.yml]({{ site.baseurl }}/images/Graph.png){: .align-center}
 {: refdef}  
 
-Nodes can have vector attributes and edges can contain several information packed in a vector.
+Nodes can have vector attributes and edges can contain several information packed in a vector. Edge information doesn't necessarly have to include computed edges such as distances. It can e.g. include information on neighbouring nodes instead. This gives the flexibility of choosing how many neighbouring nodes can influence a given state. If you now think back about the generalisability assumpution you might notice predicting a state by the state of only it's neighbouring state doesn't necessarly include the notion of a "global geometry/tobology" and thus it enforces generalisability over different topologies and geometries. It also supports the generalisation over different resolutions and discretizations argument: Instead of of predicting states using a fixed amount of data points in a geometry, the state of each node can be predicted using a given number of 
 
 
 
