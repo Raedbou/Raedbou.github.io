@@ -100,8 +100,10 @@ Nodes can have vector attributes and edges can contain several information packe
 
 Now that the data is embedded in graph representations, how do we learn on graphs? The answer to this question is Graph Neural Networks.
 
-Graph Neural Networks are built using the Message Passing framework introduced by [Giler et al.](https://arxiv.org/abs/1704.01212). They adopt a graph-in graph-out principle. This means that for graph inputs the outputs are graphs.
-
+Graph Neural Networks are built using the Message Passing framework introduced by [Giler et al.](https://arxiv.org/abs/1704.01212). They adopt a graph-in graph-out principle. This means that for graph inputs with nodes, edge and global context information the output is a graph with the same connectivity as the input graph. The idea of message passing boils down to three main steps:
+  1) For every node of the graph as message is computed for all neighbouring nodes. A messages is a function of the node information, the neighbor information, and the edge between them.
+  2) After all mesages are computed each node aggregates the messages it receives from its neighbours. Aggregation is the application of a permutation invariant function. An aggregation function can be e.g. a sum or an average, but is not limited to such simple operations.
+  3) After all messages from neighbours are passed to the current node, the node state is updated. The update is a function of the current node state and the aggregated messages (and possibly other information).
 
 
 
