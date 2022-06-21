@@ -83,13 +83,9 @@ Here I link blog posts that I find very helpful in understanding some of the abo
   - [Optimization algorithms](https://towardsdatascience.com/understanding-optimization-algorithms-in-machine-learning-edfdb4df766b) ( and if you are more into reading papers, you might enjoy reading this [survey](https://arxiv.org/pdf/1906.06821.pdf))
 
 ### Graph Neural Networks and Message Passing
-In their work, Brandstetter et al. argue that Graph Neural Networks and the concept of Message Passing satisfy conditions that are required in numerical solvers and that several previously developed ML based solvers do not satisfy. The most relevant condition for engineering applications is generalisability. Generalisability over different resolutions, topologies, geometries, initial conditions and dimensions can give rise to generic solvers over several application domains. To better understand the ground of this argument, let's understand the basics of Graph Neural Networks.
+In their work, Brandstetter et al. argue that Graph Neural Networks and the concept of Message Passing satisfy conditions that are required in numerical solvers and that several previously developed ML based solvers do not satisfy. The most relevant condition for engineering applications is generalisability. Generalisability over different resolutions, topologies, geometries, initial conditions and dimensions can give rise to generic solvers over several application domains. To understand the foundation behind this argument, let's understand the basics of Graph Neural Networks.
 
-
-
-
-The concept of graph embedding, aggregation and message passing.
-Many good resources to present this with graphs. Also from the main paper of the blog.
+Many real data cannot be respresented in a way that can be processed using ANNs (and furhter architectures such as CNNs). However, most data cannot be tranformed into graps. Graphs consist of a list of objects with connectios between them. 
 
 
 
