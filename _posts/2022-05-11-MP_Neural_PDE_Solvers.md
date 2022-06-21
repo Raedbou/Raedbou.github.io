@@ -93,10 +93,10 @@ Many real data cannot be respresented in a way that can be processed using ANNs 
 
 The objects in a graph are called nodes and the connections are edges. 
 {:refdef: style="text-align: center;"}
-![_config.yml]({{ site.baseurl }}/images/Graph.png){: .align-center, width=50}
+![_config.yml]({{ site.baseurl }}/images/Graph.png){: .align-center}
 {: refdef}  
 
-Nodes can have vector attributes and 
+Nodes can have vector attributes and edges can contain several information packed in a vector.
 
 
 
