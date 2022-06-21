@@ -33,7 +33,7 @@ An example of a PDE is the heat equation. The heat equation describes how quanti
 
 <p>  <div style="text-align: justify">
 To motivate the need to predict the solutions of PDEs it is helpful to have a look at another type of PDEs to illustrate the variety of problems they describe. Looking at different types of PDEs will be helpful later during the discussion of the paper, where you will see the importance of ML algorithms that can generalize to different PDE types.
-Let's have a look at the advection euqation (a PDE of hyperbolic type). The advection equation models how a quantity is transported in space: Examples include the wave propagation of a tsunami (The shalow water equation), the contaminant transport in a river by fluid motion... In the following video you can see how the numerical solution of the shallow water euqation describes the propagation of a wave in a fluid with reflective boundary conditions. 
+Let's have a look at the advection euqation (a PDE of hyperbolic type). The advection equation models how a quantity is transported in space: Examples include the wave propagation of a tsunami (The shalow water equation), the contaminant transport in a river by fluid motion... In the following example you can observe the numerical solution of the shallow water euqation  (that e.g. describes the propagation of a wave in a fluid) with reflective boundary conditions. 
 </div> </p>
 
 {:refdef: style="text-align: center;"}
@@ -48,7 +48,7 @@ The above mentionned problems take only a couple of second to solve for one init
 ![_config.yml]({{ site.baseurl }}/images/Showcase_PDE.jpg){: .align-center}
 {: refdef}
 [**(left)**](https://arxiv.org/pdf/1607.00630.pdf) Largest turbulence simulation: 1.014e+12 degrees of freedom on 65000 cores: [Video](https://www.mso.anu.edu.au/~chfeder/pubs/sonic_scale/Federrath_sonic_scale_lowres.mp4)
-[**(Right)**](https://www.nao.ac.jp/en/news/science/2021/20210910-cfca.html) Largest simulation of the uBig Bang: 2.1e+12 particles on 40200 cores: [Video](https://www.youtube.com/watch?time_continue=3&v=R7nV6JEMGAo&feature=emb_title)
+[**(Right)**](https://www.nao.ac.jp/en/news/science/2021/20210910-cfca.html) Largest simulation of the Universie: 2.1e+12 particles on 40200 cores: [Video](https://www.youtube.com/watch?time_continue=3&v=R7nV6JEMGAo&feature=emb_title)
 
 <p>  <div style="text-align: justify">
 Now that I assume this digression thrilled you and that you recognize the urge for efficient prediction methods for simulations, we dive back into theory and have a look at some DL concepts. 
@@ -82,7 +82,12 @@ Here I link blog posts that I find very helpful in understanding some of the abo
   
   - [Optimization algorithms](https://towardsdatascience.com/understanding-optimization-algorithms-in-machine-learning-edfdb4df766b) ( and if you are more into reading papers, you might enjoy reading this [survey](https://arxiv.org/pdf/1906.06821.pdf))
 
-### Graph Neural Networks and Message Passing Neural Networks
+### Graph Neural Networks and Message Passing
+In their work, Brandstetter et al. argue that Graph Neural Networks and the concept of Message Passing satisfy conditions that are required in numerical solvers and that several previously developed ML based solvers do not satisfy. The most relevant condition for engineering applications is generalisability. Generalisability over different resolutions, topologies, geometries, initial conditions and dimensions can give rise to generic solvers over several application domains. To better understand the ground of this argument, let's understand the basics of Graph Neural Networks.
+
+
+
+
 The concept of graph embedding, aggregation and message passing.
 Many good resources to present this with graphs. Also from the main paper of the blog.
 
