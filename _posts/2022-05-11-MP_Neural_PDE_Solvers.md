@@ -94,7 +94,7 @@ Many real data cannot be respresented in a way that can be processed using ANNs 
 The objects in a graph are called nodes and the connections are edges. 
 
 {:refdef: style="text-align: center;"}
-![_config.yml]({{ site.baseurl }}/images/Graph.png){: .align-center}
+![_config.yml]({{ site.baseurl }}/images/Graph.png =10x20){: .align-center}
 {: refdef}  
 
 
