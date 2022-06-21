@@ -92,7 +92,6 @@ Many real data cannot be respresented in a way that can be processed using ANNs 
   - In molecular dynamics the objecs are atoms described by an atom type and connected by relative positions and edge types.  
 
 The objects in a graph are called nodes and the connections are edges. 
-
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/Graph.png){width=50}{: .align-center}
 {: refdef}  
