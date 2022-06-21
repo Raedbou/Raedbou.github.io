@@ -96,6 +96,8 @@ The objects in a graph are called nodes and the connections are edges.
 ![_config.yml]({{ site.baseurl }}/images/Graph.png){: .align-center, width=50}
 {: refdef}  
 
+Nodes can have vector attributes and 
+
 
 
 ## Deep Learning for physics simulations: The 2 paradigms 
