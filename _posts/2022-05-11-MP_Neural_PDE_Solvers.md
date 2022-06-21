@@ -98,7 +98,12 @@ The objects in a graph are called nodes and the connections are edges.
 
 Nodes can have vector attributes and edges can contain several information packed in a vector. Edge information doesn't necessarly have to include computed edges such as distances. It can e.g. include information on neighbouring nodes instead. This gives the flexibility of choosing how many neighbouring nodes can influence a given state. If you now think back about the generalisability assumpution you might notice predicting a state by the state of only it's neighbouring state doesn't necessarly include the notion of a "global geometry/tobology" and thus it enforces generalisability over different topologies and geometries. It also supports the generalisation over different resolutions and discretizations argument: Instead of of predicting states using a fixed amount of data points in a geometry, the state of each node can be predicted using the states of a given number of neighbours and the geometry can still be embedded into the edge attributes.
 
-Now that we are convinced of the advantages of graph representations over for e.g. vector field representations, I assume yor are ransing the question: But how do we learn on graphs? The answer to this question is Graph Neural Networks.
+Now that the data is embedded in graph representations, how do we learn on graphs? The answer to this question is Graph Neural Networks.
+
+Graph Neural Networks are built using the Message Passing framework introduced by [Giler et al.](https://arxiv.org/abs/1704.01212). They adopt a graph-in graph-out principle. This means that for graph inputs the outputs are graphs.
+
+
+
 
 
 
