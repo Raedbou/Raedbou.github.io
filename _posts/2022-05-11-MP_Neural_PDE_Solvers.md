@@ -125,6 +125,10 @@ For more detailed information supported with visual interactive material about G
 
 
 ## Connecting the dots
+
+Key points we learned so far are:
+- Data from many physics simulations can be represented as graphs
+- Learning on graphs can be very efficient and 
 ### Neural Opeators and Autoregressive Methods
 
 ## GNNs and FNOs
