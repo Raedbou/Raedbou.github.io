@@ -5,7 +5,7 @@ published: true
 ---
 ![_config.yml]({{ site.baseurl }}/images/MP-PDE-Solver.png){: .align-center}
 
-<p>  <div style="text-align: justify"> <em> This blog post is based on the paper: Brandstetter, Johannes, Daniel Worrall, and Max Welling. "Message passing neural PDE solvers." arXiv preprint arXiv:2202.03376 (2022).  </em> </div> </p>
+<p>  <div style="text-align: justify"> <em> This blog post is based on the paper: Brandstetter, Johannes, Daniel Worrall, and Max Welling. "Message passing neural PDE solvers." arXiv preprint arXiv:2202.03376 (2022). (Link to paper [here](https://arxiv.org/abs/2202.03376)) </em> </div> </p>
 
 
 <p>  <div style="text-align: justify"> Many problems in science and engineering (Fluid mechanics, plasticity, quantum mechanics, climate models, biological systems...) are described using Partial Differential Equations (PDE). Most PDEs described real world problems require numerical solutions. For large problems the numerical solutions are computationally expensive. Well established methods to solve PDEs are the Finite Difference Method (FDM), Finite Volume Method (FVM) and Finite Element Method (FEM). These methods require a fine spatial discretization of the computational domains and get very slow and inefficient. Many scientists have been trying to overcome these difficulties in classical numerical methods by leveraging Machine Learning (ML) methods. Recently a lot of efforts have been shifted towards Deep Learning (DL) and Graph Neural Networks (GNN). We will kick of this blog post by introducing thegeneral setting of PDE based numerical simulations followed by a brief introduction to  DL and GNNs and then focus on the solution of PDEs using DL and GNNs. If you are familiar with PDEs and/or GNNs you can skip the next two sections and proceed with the exciting part (I would argue that going back to some basics from time to time is also exciting).  </div> </p>
@@ -143,7 +143,7 @@ There are two main paradigms that are been applied in using Machine Learning to 
 Neural Operators learn predictions from an initial condition to a given timestep t. Neural Operators are trained on example solutions of a given equation and are thus locked to a given equation and do not generalize well. Autoregressive Methods are iterative. They rely on an initial state of a time dependant problem and then iteratively generate solutions from predicted states. In other words, if an Autoregressive Method receives an initial state of a problem and a number of timesteps it generates the prediction at time one from the initial condition, than the prediction at time 2 from the previously made prediction 1 and so forth until n predictions are generated.
 
 ### Neural Opeators and Autoregressive Methods
-
+In their paper, [Brandstetter et al.](https://arxiv.org/abs/2202.03376) argue that Autoregressive Methods are hard to train. This is due to their instability. 
 
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/Unstable.png){: .align-center}
