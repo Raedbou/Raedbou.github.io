@@ -126,13 +126,15 @@ For more detailed information supported with visual interactive material about G
 
 ## Connecting the dots
 
-At this points let's connect the key points we learned so far: In simulations we predict future sttes from current states. Similar to simulation, in Message Passing GNNs the transformation of graphs between different states are learned and future states of graph nodes can be predicted from current states. Let's visalize this analogy:
+At this points let's connect the key points we learned so far: In simulations we predict future sttes from current states. Similar to simulation, in Message Passing GNNs the transformation of graphs between different states are learned and future states of graph nodes can be predicted from current states. Let's visualize this analogy:
 
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/MP_PDE_Analogy.png){: .align-center}
 {: refdef}  
 
-Simulations can be very expensive and there is a substantial need for methods that accelerate them. Here Machine Learning comes in handy. GNNs learn efficiently on graphs and many physical data can be interpreted into graphs.
+We saw that simulations can be very expensive and motivated the need for methods that accelerate them. Here Machine Learning comes in handy. GNNs learn efficiently on graphs and many physical data can be interpreted into graphs. This synergy results in Message Passing Neural PDEs solvers.
+
+There are two main paradigms that are been applied in using Machine Learning to solve PDEs. These differ
 
 
 Key points we learned so far are:
