@@ -144,7 +144,11 @@ Neural Operators learn predictions from an initial condition to a given timestep
 
 ### Neural Opeators and Autoregressive Methods
 
-## GNNs and FNOs
+
+{:refdef: style="text-align: center;"}
+![_config.yml]({{ site.baseurl }}/images/Unstable.png){: .align-center}
+{: refdef}  
+
 
 ## What's new in the work of Brandstetter et al.
 In this section we present (an also discuss?) the "cool" tricks making this paper special
