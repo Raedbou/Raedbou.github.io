@@ -134,13 +134,13 @@ At this points let's connect the key points we learned so far: In simulations we
 
 We saw that simulations can be very expensive and motivated the need for methods that accelerate them. Here Machine Learning comes in handy. GNNs learn efficiently on graphs and many physical data can be interpreted into graphs. This synergy results in Message Passing Neural PDEs solvers.
 
-There are two main paradigms that are been applied in using Machine Learning to solve PDEs. These differ
+There are two main paradigms that are been applied in using Machine Learning to solve PDEs: Neural Operators and Autoregressive Methods.
+
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/NeuralMethods.png){: .align-center}
 {: refdef}  
 
-
-
+Neural Operators learn predictions from an initial condition to a given timestep t. Neural Operators are trained on example solutions of a given equation and are thus locked to a given equation and do not generalize well. Autoregressive Methods are iterative. They rely on an initial state of a time dependant problem and then iteratively generate solutions from predicted states. In other words, if an Autoregressive Method receives an initial state of a problem and a number of timesteps it generates the prediction at time one from the initial condition, than the prediction at time 2 from the previously made prediction 1 and so forth until n predictions are generated.
 
 ### Neural Opeators and Autoregressive Methods
 
