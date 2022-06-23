@@ -103,7 +103,7 @@ Now that the data is embedded in graph representations, how do we learn on graph
 
 Graph Neural Networks are built using the Message Passing framework introduced by [Giler et al.](https://arxiv.org/abs/1704.01212). They adopt a graph-in graph-out principle. This means that for graph inputs with nodes, edge and global context information the output is a graph with the same connectivity as the input graph. The idea of message passing boils down to three main steps:
 
-  1) For every node of the graph as message is computed for all neighbouring nodes. A messages is a function of the node information, the neighbor information, and the edge between them.
+  1) For every node of the graph as message is computed for all neighbouring nodes. A messages is a function of the node information, the neighbor information, and the edge between them. This function can be a Multilayer Perceptron.
 
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/MP1.png){: .align-center}
@@ -115,17 +115,16 @@ Graph Neural Networks are built using the Message Passing framework introduced b
 ![_config.yml]({{ site.baseurl }}/images/MP2.png){: .align-center}
 {: refdef}  
   
-  3) After all messages from neighbours are passed to the current node, the node state is updated. The update is a function of the current node state and the aggregated messages (and possibly other information).
+  3) After all messages from neighbours are passed to the current node, the node state is updated. The update is a function of the current node state and the aggregated messages (and possibly other information). The update function is learned using training data and can e.g. be a Feedfowrd Neural Network.
 
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/MP3.png){: .align-center}
 {: refdef}  
 
+For more detailed information supported with visual interactive material about Graph Neural Networks you can check "[A Gentle Introduction to Graph Neural Networks](https://distill.pub/2021/gnn-intro/)". W.L. Hamiltons McGill [course on Graph Representation Learning](https://cs.mcgill.ca/~wlh/comp766/files/chapter4_draft_mar29.pdf) also offers a thorough introduction to GNNs and Message Passing. 
 
 
-
-
-## Deep Learning for physics simulations: The 2 paradigms 
+## Connecting the dots
 ### Neural Opeators and Autoregressive Methods
 
 ## GNNs and FNOs
