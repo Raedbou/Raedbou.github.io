@@ -135,11 +135,13 @@ At this points let's connect the key points we learned so far: In simulations we
 We saw that simulations can be very expensive and motivated the need for methods that accelerate them. Here Machine Learning comes in handy. GNNs learn efficiently on graphs and many physical data can be interpreted into graphs. This synergy results in Message Passing Neural PDEs solvers.
 
 There are two main paradigms that are been applied in using Machine Learning to solve PDEs. These differ
+{:refdef: style="text-align: center;"}
+![_config.yml]({{ site.baseurl }}/images/NeuralMethods.png){: .align-center}
+{: refdef}  
 
 
-Key points we learned so far are:
-- Data from many physics simulations can be represented as graphs
-- Learning on graphs can be very efficient and 
+
+
 ### Neural Opeators and Autoregressive Methods
 
 ## GNNs and FNOs
