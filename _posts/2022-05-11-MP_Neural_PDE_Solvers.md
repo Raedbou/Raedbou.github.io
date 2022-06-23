@@ -142,13 +142,14 @@ There are two main paradigms that are been applied in using Machine Learning to 
 
 Neural Operators learn predictions from an initial condition to a given timestep t. Neural Operators are trained on example solutions of a given equation and are thus locked to a given equation and do not generalize well. Autoregressive Methods are iterative. They rely on an initial state of a time dependant problem and then iteratively generate solutions from predicted states. In other words, if an Autoregressive Method receives an initial state of a problem and a number of timesteps it generates the prediction at time one from the initial condition, than the prediction at time 2 from the previously made prediction 1 and so forth until n predictions are generated.
 
-### Neural Opeators and Autoregressive Methods
+## Autoregressive Methods and Instability
 In their paper, [Brandstetter et al.](https://arxiv.org/abs/2202.03376) argue that Autoregressive Methods are hard to train. This is due to their instability. The definition of stability in this context is similar to its definition in numerical analysis: Numerical stability concerns how errors introduced during the execution of an algorithm affect the result. In Autoregressive Neural PDE solvers instability means that prediction error get accumulated through the prediction and that for a growing prediction horizon the error explodes.Due to the latter phenomena predictions for large time periods may not be possible. In the following figure we illustrate how error grows in time for autoregressive methods and the prediction diverges from the solution manifold. 
 
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/Unstable.png){: .align-center}
 {: refdef}  
 
+This phenomena has been shown in many applications and has been addressed in many different ways. For e.g. [Kneifl et al.](https://arxiv.org/pdf/2110.13583.pdf) observed error accumulation in an autoregressive framework. [Liu et al.](https://arxiv.org/pdf/2008.09768.pdf) and [Vlachas et al.](https://www.nature.com/articles/s42256-022-00464-w.pdf?origin=ppub) addressed the  problem of instability in autoregressive methods. However not many publications can be found that address instablity of Message Passing Neural PDE solver. That it what makes the paper we discuss here unique. The main contribution of the authors lays in finding "tricks" to improve the stability and the generalisability of Message Passing Autoregressive methods.
 
 ## What's new in the work of Brandstetter et al.
 In this section we present (an also discuss?) the "cool" tricks making this paper special
