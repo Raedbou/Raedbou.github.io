@@ -104,9 +104,21 @@ Graph Neural Networks are built using the Message Passing framework introduced b
 
   1) For every node of the graph as message is computed for all neighbouring nodes. A messages is a function of the node information, the neighbor information, and the edge between them.
 
+{:refdef: style="text-align: center;"}
+![_config.yml]({{ site.baseurl }}/images/MP1.png){: .align-center}
+{: refdef}  
+
   2) After all mesages are computed each node aggregates the messages it receives from its neighbours. Aggregation is the application of a permutation invariant function. An aggregation function can be e.g. a sum or an average, but is not limited to such simple operations.
+ 
+ {:refdef: style="text-align: center;"}
+![_config.yml]({{ site.baseurl }}/images/MP2.png){: .align-center}
+{: refdef}  
   
   3) After all messages from neighbours are passed to the current node, the node state is updated. The update is a function of the current node state and the aggregated messages (and possibly other information).
+
+{:refdef: style="text-align: center;"}
+![_config.yml]({{ site.baseurl }}/images/MP3.png){: .align-center}
+{: refdef}  
 
 
 
