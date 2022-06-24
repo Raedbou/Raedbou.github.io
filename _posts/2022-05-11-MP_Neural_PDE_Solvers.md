@@ -184,7 +184,18 @@ The choice of
 ![_config.yml]({{ site.baseurl }}/images/periodic_bc.png ){: .align-center}
 {: refdef}  
 
-as a periodic condition guarantees periodicity of the initial condtions and also forcing term. And the parametrisation enables straightforward embedding of the initial condition and forcing term as features.
+as an initial condition guarantees periodicity of the initial condtions and also forcing term. And the parametrisation enables straightforward embedding of the initial condition and forcing term as features.
+
+The ground truth (Training data) have been generated using the following setup:
+
+  - Solver: Convection term with WENO5 (High Order Finite Volume Scheme) and remaining terms with a 4th- order finite differences.
+  - Time stepping: Explicit Runge Kutta with adaptive time stepping.
+  - Spacial discretization: n=200 uniformly distributed points in [0, 16], (With downscaling to: 100, 50, 40 to test generalizability),
+  - Time discretization: n=200 uniformly distributed points in [0, 4]
+  - Number of training data points: 2096
+
+
+
 
 
 ## How well do MP-N-PDE Solvers perform?
