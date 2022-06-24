@@ -166,7 +166,7 @@ Another trick effective for stability is predicting multiple time steps at a tim
 
 ## Training workflow
 
-In this paper the adressed PDE problem has the form
+In the paper the authors formulate the PDE problem
 
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/pde_formulation.png){: .align-center}
@@ -174,11 +174,13 @@ In this paper the adressed PDE problem has the form
 
 This formulation of the problem enables generalization to different PDE classes and type. By changing the parameters β, γ and α different 1D-PDEs are adressed at a time. For example the following (α,β,γ) combinations yield the following PDEs:
 
-|  (α,β,γ)    | Equation | PDE Type |
+<div class="datatable-begin"></div>
+|  (α,β,γ)    | Equation    | PDE Type |
 | ----------- | ----------- | ----------- |
 | (0,η,0)      | Heat euqation     | Parabolic    |
 | (0.5,η,0)    | Generalized Burgers equation      | Hyperbolic for η>0   |
 | (3,0,1)  | Korteweg–De Vries equation  | Hyperbolic |
+<div class="datatable-end"></div>
 
 The choice of 
 
