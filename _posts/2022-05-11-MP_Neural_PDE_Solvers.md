@@ -167,6 +167,7 @@ Another trick effective for stability is predicting multiple time steps at a tim
 ## Training workflow
 
 In this paper the adressed PDE problem has the form
+
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/pde_formulation.png){: .align-center}
 {: refdef}  
@@ -179,7 +180,13 @@ This formulation of the problem enables generalization to different PDE classes 
 | (0.5,η,0)    | Generalized Burgers equation      | Hyperbolic for η>0   |
 | (3,0,1)  | Korteweg–De Vries equation  | Hyperbolic |
 
+The choice of 
 
+{:refdef: style="text-align: center;"}
+![_config.yml]({{ site.baseurl }}/images/periodic_bc.png ){: .align-center}
+{: refdef}  
+
+as a periodic condition guarantees periodicity of the initial condtions and also forcing term. And the parametrisation enables straightforward embedding of the initial condition and forcing term as features.
 
 
 ## How well do MP-N-PDE Solvers perform?
