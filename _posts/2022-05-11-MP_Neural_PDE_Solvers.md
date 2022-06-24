@@ -158,6 +158,9 @@ The authors approach gthe problem in probablistic terms. From a probablistic poi
 ### Temporal Bundling
 Another trick effective for stability is predicting multiple time steps at a time. The authors argument that a fewer number of calls of the solver results in fewer distribution shifts which reduces the error propagation. Another possible explanation to the increased stability through temporal bundling is that by predicting over multiple time steps the prediction error is "distributed" over multiple timesteps and the error contribution to single steps is limited.
 
+{:refdef: style="text-align: center;"}
+![_config.yml]({{ site.baseurl }}/images/bundling.png){: .align-center}
+{: refdef}  
 
 ## Generalisation over different classes of PDEs
 
