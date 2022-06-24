@@ -174,13 +174,9 @@ In the paper the authors formulate the PDE problem
 
 This formulation of the problem enables generalization to different PDE classes and type. By changing the parameters β, γ and α different 1D-PDEs are adressed at a time. For example the following (α,β,γ) combinations yield the following PDEs:
 
-<div class="datatable-begin"></div>
-|  (α,β,γ)    | Equation    | PDE Type |
-| ----------- | ----------- | ----------- |
-| (0,η,0)      | Heat euqation     | Parabolic    |
-| (0.5,η,0)    | Generalized Burgers equation      | Hyperbolic for η>0   |
-| (3,0,1)  | Korteweg–De Vries equation  | Hyperbolic |
-<div class="datatable-end"></div>
+{:refdef: style="text-align: center;"}
+![_config.yml]({{ site.baseurl }}/images/pde_type.png ){: .align-center}
+{: refdef}  
 
 The choice of 
 
