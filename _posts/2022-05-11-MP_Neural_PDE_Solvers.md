@@ -186,14 +186,6 @@ The choice of
 
 as an initial condition guarantees periodicity of the initial condtions and also forcing term. And the parametrisation enables straightforward embedding of the initial condition and forcing term as features.
 
-The ground truth (Training data) have been generated using the following setup:
-
-  - Solver: Convection term with WENO5 (High Order Finite Volume Scheme) and remaining terms with a 4th- order finite differences.
-  - Time stepping: Explicit Runge Kutta with adaptive time stepping.
-  - Spacial discretization: n=200 uniformly distributed points in [0, 16], (With downscaling to: 100, 50, 40 to test generalizability),
-  - Time discretization: n=200 uniformly distributed points in [0, 4]
-  - Number of training data points: 2096
-
 The node embedding vector is a mapping from the solution (velocities) of the last k time steps (due to temporal bundling), the node position, the current timestep and a vector θ that contains (α,β,γ) and δ specific parameters (initial condition and forcing terms). The node embeddings are used to compute the messages. The message at a given edge is chosen to be a function of the embeddings f of the corresponding nodes i and j, the relative distance of the solutions u at all k time points (velocities), the distance between the node positions x and θ. The message m is computed by means of a Multilayer Perceptron Φ. 6 Steps of message passing are computed and the hraph update is computed by a Multilayer Perceptron ψ that receives the node embedding vector, the aggregated messages and θ. The aggregation function sums up all messages. In a last step (the decoder) the updated graph is passed through a shallow convolutional neural network with shared weights. This step is used to smooth the output of the previous step in time. Smoothing the signal over time and treating it as a continuous signal allows genrating predictions for infenitisimal small time steps. The authors rely on this step to draw analogies to consistancy in numerical analysis, which is a requirement for zero-stability, that they tried to guarantee by implementing temporal bundling and the pushforward trick.
 
 {:refdef: style="text-align: center;"}
@@ -201,9 +193,19 @@ The node embedding vector is a mapping from the solution (velocities) of the las
 {: refdef}  
 
 
+## How well do Message Passing neural PDE Solvers perform?
+To evaluate the performance the authors generated 3 scenarios that were used to train the above explained framwork. These scenarios are:
+  - **Burger's Equarion (E1):** (α,β,γ)=(1,0,0). Equation without diffusion with the aim of evaluating schock modeling.
+  - **Burger's Equarion (E2):** (α,β,γ)=(1,η,0). Burger's Equation ith diffusion controled by the value of the variable η, where η is in the range 0 and 0.2
+  - **Generalized equation (E3):** (α,β,γ)=(α,β,γ). A mixed scenario with variables consequently in the intervals [0,3], [0,0.4] and [0,1] to test generalisability.
 
-## How well do MP-N-PDE Solvers perform?
-This is the part with numerical results from this paper. Even though many methods are presented, only results from Brandstetter et al. are discussed.
+The ground truth (Training data) have been generated using the following setup:
+
+  - Solver: Convection term with WENO5 (High Order Finite Volume Scheme) and remaining terms with a 4th- order finite differences.
+  - Time stepping: Explicit Runge Kutta with adaptive time stepping.
+  - Spacial discretization: n=200 uniformly distributed points in [0, 16], (With downscaling to: 100, 50, 40 to test generalizability),
+  - Time discretization: n=200 uniformly distributed points in [0, 4]
+  - Number of training data points: 2096
 
 
 ## What's left to do?
