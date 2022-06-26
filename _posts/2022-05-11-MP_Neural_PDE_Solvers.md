@@ -194,10 +194,12 @@ The node embedding vector is a mapping from the solution (velocities) of the las
 
 
 ## How well do Message Passing neural PDE Solvers perform?
+### Testing generalisability to different PDE types
+
 To evaluate the performance the authors generated 3 scenarios that were used to train the above explained framwork. These scenarios are:
-  - **Burger's Equarion (E1):** (α,β,γ)=(1,0,0). Equation without diffusion with the aim of evaluating schock modeling.
-  - **Burger's Equarion (E2):** (α,β,γ)=(1,η,0). Burger's Equation ith diffusion controled by the value of the variable η, where η is in the range 0 and 0.2
-  - **Generalized equation (E3):** (α,β,γ)=(α,β,γ). A mixed scenario with variables consequently in the intervals [0,3], [0,0.4] and [0,1] to test generalisability.
+  - **Burger's Equation (E1):** (α,β,γ)=(1,0,0). Equation without diffusion with the aim of evaluating schock modeling.
+  - **Burger's Equation (E2):** (α,β,γ)=(1,η,0). Burger's Equation with diffusion controled by the value of the variable η, where η is in the range 0 and 0.2
+  - **Generalized Equation (E3):** (α,β,γ)=(α,β,γ). A mixed scenario with variables consequently in the intervals [0,3], [0,0.4] and [0,1] to test generalisability.
 
 The ground truth (Training data) have been generated using the following setup:
 
@@ -206,6 +208,14 @@ The ground truth (Training data) have been generated using the following setup:
   - Spacial discretization: n=200 uniformly distributed points in [0, 16], (With downscaling to: 100, 50, 40 to test generalizability),
   - Time discretization: n=200 uniformly distributed points in [0, 4]
   - Number of training data points: 2096
+
+### Testing generalisability to different boundary conditions
+
+To invitigate the performance of the developed methods when predicting different boundary conditions the authors choose to learn the solutions of the 1d Wave equation 
+
+{:refdef: style="text-align: center;"}
+![_config.yml]({{ site.baseurl }}/images/wave_eq.png ){: .align-center}
+{: refdef}  
 
 
 ## What's left to do?
