@@ -228,6 +228,20 @@ and training data on an irregular grid (Chebyshev points). The [Chebyshev points
 ![_config.yml]({{ site.baseurl }}/images/runtime_bc.png ){: .align-center}
 {: refdef}  
 
+
+
+{:refdef: style="text-align: center;"}
+![_config.yml]({{ site.baseurl }}/images/e1.png ){: .align-center}
+{: refdef}  
+
+{:refdef: style="text-align: center;"}
+![_config.yml]({{ site.baseurl }}/images/e2.png ){: .align-center}
+{: refdef}  
+
+{:refdef: style="text-align: center;"}
+![_config.yml]({{ site.baseurl }}/images/e3.png ){: .align-center}
+{: refdef}  
+
 ## What's left to do?
 here critique and a small review of the presented methods can be written.
 
