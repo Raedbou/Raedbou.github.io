@@ -217,6 +217,12 @@ To invitigate the performance of the developed methods when predicting different
 ![_config.yml]({{ site.baseurl }}/images/wave_eq.png ){: .align-center}
 {: refdef}  
 
+with a wave velocity c=2 and with different boundary conditions:
+  - **Dirichlet Boundary Conditions (WE1)**
+  - **Neumann Boundary Conditions (WE2)**
+  - **Robin Boundary Conditions (WE3)**
+
+and training data on an irregular grid (Chebyshev points). The [Chebyshev points](https://en.wikipedia.org/wiki/Chebyshev_nodes) are equivalent to the x coordinates of n equally spaced points on a unit semicircle.
 
 ## What's left to do?
 here critique and a small review of the presented methods can be written.
