@@ -224,6 +224,10 @@ with a wave velocity c=2 and with different boundary conditions:
 
 and training data on an irregular grid (Chebyshev points). The [Chebyshev points](https://en.wikipedia.org/wiki/Chebyshev_nodes) are equivalent to the x coordinates of n equally spaced points on a unit semicircle.
 
+{:refdef: style="text-align: center;"}
+![_config.yml]({{ site.baseurl }}/images/runtime_bc.png ){: .align-center}
+{: refdef}  
+
 ## What's left to do?
 here critique and a small review of the presented methods can be written.
 
