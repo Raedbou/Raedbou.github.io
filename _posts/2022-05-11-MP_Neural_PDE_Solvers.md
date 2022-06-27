@@ -107,9 +107,10 @@ Nodes can have vector attributes and edges can contain several information packe
 Now that the data is embedded in graph representations, how do we learn on graphs? The answer to this question is Graph Neural Networks.
 </div> </p>
 
-<p>  <div style="text-align: justify">
-Graph Neural Networks are built using the Message Passing framework introduced by </div> </p> [Giler et al.](https://arxiv.org/abs/1704.01212). <p>  <div style="text-align: justify"> They adopt a graph-in graph-out principle. This means that for graph inputs with nodes, edge and global context information the output is a graph with the same connectivity as the input graph. The idea of message passing boils down to three main steps:
 
+Graph Neural Networks are built using the Message Passing framework introduced by [Giler et al.](https://arxiv.org/abs/1704.01212). They adopt a graph-in graph-out principle. This means that for graph inputs with nodes, edge and global context information the output is a graph with the same connectivity as the input graph. The idea of message passing boils down to three main steps:
+
+<p>  <div style="text-align: justify">
   1) For every node of the graph as message is computed for all neighbouring nodes. A messages is a function of the node information, the neighbor information, and the edge between them. This function can be a Multilayer Perceptron.
 </div> </p>
 
@@ -127,9 +128,8 @@ Graph Neural Networks are built using the Message Passing framework introduced b
 ![_config.yml]({{ site.baseurl }}/images/MP3.png){: .align-center}
 {: refdef}  
 
-<p>  <div style="text-align: justify">
-For more detailed information supported with visual interactive material about Graph Neural Networks you can check </div> </p> "[A Gentle Introduction to Graph Neural Networks](https://distill.pub/2021/gnn-intro/)". <p>  <div style="text-align: justify"> W.L. Hamiltons McGill </div> </p>  [course on Graph Representation Learning](https://cs.mcgill.ca/~wlh/comp766/files/chapter4_draft_mar29.pdf) <p>  <div style="text-align: justify">  also offers a thorough introduction to GNNs and Message Passing. 
-</div> </p>
+For more detailed information supported with visual interactive material about Graph Neural Networks you can check "[A Gentle Introduction to Graph Neural Networks](https://distill.pub/2021/gnn-intro/)". <p>  <div style="text-align: justify"> W.L. Hamiltons McGill [course on Graph Representation Learning](https://cs.mcgill.ca/~wlh/comp766/files/chapter4_draft_mar29.pdf)   also offers a thorough introduction to GNNs and Message Passing. 
+
 
 ## Connecting the dots
 
@@ -156,9 +156,8 @@ Neural Operators learn predictions from an initial condition to a given timestep
 </div> </p>
 
 ## Autoregressive Methods and Instability
-<p>  <div style="text-align: justify">
-In their paper, </div> </p> [Brandstetter et al.](https://arxiv.org/abs/2202.03376) <p>  <div style="text-align: justify"> argue that Autoregressive Methods are hard to train. This is due to their instability. The definition of stability in this context is similar to its definition in numerical analysis: Numerical stability concerns how errors introduced during the execution of an algorithm affect the result. In Autoregressive Neural PDE solvers instability means that prediction error get accumulated through the prediction and that for a growing prediction horizon the error explodes.Due to the latter phenomena predictions for large time periods may not be possible. In the following figure we illustrate how error grows in time for autoregressive methods and the prediction diverges from the solution manifold. 
-</div> </p>
+
+In their paper, [Brandstetter et al.](https://arxiv.org/abs/2202.03376) argue that Autoregressive Methods are hard to train. This is due to their instability. The definition of stability in this context is similar to its definition in numerical analysis: Numerical stability concerns how errors introduced during the execution of an algorithm affect the result. In Autoregressive Neural PDE solvers instability means that prediction error get accumulated through the prediction and that for a growing prediction horizon the error explodes.Due to the latter phenomena predictions for large time periods may not be possible. In the following figure we illustrate how error grows in time for autoregressive methods and the prediction diverges from the solution manifold. 
 
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/Unstable.png){: .align-center}
@@ -169,13 +168,19 @@ This phenomena has been shown in many applications and has been addressed in man
 
 ## Tricks to impose stability
 ### The pushforward trick
+
+<p>  <div style="text-align: justify">
 The authors approach gthe problem in probablistic terms. From a probablistic point of view, the solver is learning the pushforward operator that transforms the probability distribution of a state k to a probability distribution of a state k+1. This means that after one step of autoregression the solver gets as input the probability distribution generated by the learned pushfrward operator. That was the smart way to say that for each time iteration the solver seach a result that constitutes of the ground truth state corrupted by some error. That results in a probability distribution that is shifted. The authors idea is to account for the distribution shift in an axtra loss term of adverserial style. The perturbation is chosen 
 
 This "complicated" approach was implemented with an easy trick. The authors found out that the pushforward trick can be achieved by by unrolling the solver over 2 steps and only bacpropagating the error on the last step. Theyr numerical experiments also showed that this trick makes the training faster and the prediction more stable.
 
+  </div> </p>
 ### Temporal Bundling
-Another trick effective for stability is predicting multiple time steps at a time. The authors argument that a fewer number of calls of the solver results in fewer distribution shifts which reduces the error propagation. Another possible explanation to the increased stability through temporal bundling is that by predicting over multiple time steps the prediction error is "distributed" over multiple timesteps and the error contribution to single steps is limited.
 
+<p>  <div style="text-align: justify">
+Another trick effective for stability is predicting multiple time steps at a time. The authors argument that a fewer number of calls of the solver results in fewer distribution shifts which reduces the error propagation. Another possible explanation to the increased stability through temporal bundling is that by predicting over multiple time steps the prediction error is "distributed" over multiple timesteps and the error contribution to single steps is limited.
+  </div> </p>
+  
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/bundling.png){: .align-center}
 {: refdef}  
@@ -188,7 +193,9 @@ In the paper the authors formulate the PDE problem
 ![_config.yml]({{ site.baseurl }}/images/pde_formulation.png){: .align-center}
 {: refdef}  
 
+<p>  <div style="text-align: justify">
 This formulation of the problem enables generalization to different PDE classes and type. By changing the parameters β, γ and α different 1D-PDEs are adressed at a time. For example the following (α,β,γ) combinations yield the following PDEs:
+</div> </p>
 
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/pde_type.png ){: .align-center}
@@ -200,9 +207,11 @@ The choice of
 ![_config.yml]({{ site.baseurl }}/images/periodic_bc.png ){: .align-center}
 {: refdef}  
 
+<p>  <div style="text-align: justify">
 as an initial condition guarantees periodicity of the initial condtions and also forcing term. And the parametrisation enables straightforward embedding of the initial condition and forcing term as features.
 
 The node embedding vector is a mapping from the solution (velocities) of the last k time steps (due to temporal bundling), the node position, the current timestep and a vector θ that contains (α,β,γ) and δ specific parameters (initial condition and forcing terms). The node embeddings are used to compute the messages. The message at a given edge is chosen to be a function of the embeddings f of the corresponding nodes i and j, the relative distance of the solutions u at all k time points (velocities), the distance between the node positions x and θ. The message m is computed by means of a Multilayer Perceptron Φ. 6 Steps of message passing are computed and the hraph update is computed by a Multilayer Perceptron ψ that receives the node embedding vector, the aggregated messages and θ. The aggregation function sums up all messages. In a last step (the decoder) the updated graph is passed through a shallow convolutional neural network with shared weights. This step is used to smooth the output of the previous step in time. Smoothing the signal over time and treating it as a continuous signal allows genrating predictions for infenitisimal small time steps. The authors rely on this step to draw analogies to consistancy in numerical analysis, which is a requirement for zero-stability, that they tried to guarantee by implementing temporal bundling and the pushforward trick.
+</div> </p>
 
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/framework.png ){: .align-center}
@@ -217,6 +226,8 @@ To evaluate the performance the authors generated 3 scenarios that were used to 
   - **Burger's Equation (E2):** (α,β,γ)=(1,η,0). Burger's Equation with diffusion controled by the value of the variable η, where η is in the range 0 and 0.2
   - **Generalized Equation (E3):** (α,β,γ)=(α,β,γ). A mixed scenario with variables consequently in the intervals [0,3], [0,0.4] and [0,1] to test generalisability.
 
+
+<p>  <div style="text-align: justify">
 The ground truth (Training data) have been generated using the following setup:
 
   - Solver: Convection term with WENO5 (High Order Finite Volume Scheme) and remaining terms with a 4th- order finite differences.
@@ -224,6 +235,22 @@ The ground truth (Training data) have been generated using the following setup:
   - Spacial discretization: n=200 uniformly distributed points in [0, 16], (With downscaling to: 100, 50, 40 to test generalizability),
   - Time discretization: n=200 uniformly distributed points in [0, 4]
   - Number of training data points: 2096
+</div> </p>
+
+
+{:refdef: style="text-align: center;"}
+![_config.yml]({{ site.baseurl }}/images/e1.png ){: .align-center}
+{: refdef}  
+
+{:refdef: style="text-align: center;"}
+![_config.yml]({{ site.baseurl }}/images/e2.png ){: .align-center}
+{: refdef}  
+
+{:refdef: style="text-align: center;"}
+![_config.yml]({{ site.baseurl }}/images/e3.png ){: .align-center}
+{: refdef}  
+
+
 
 ### Testing generalisability to different boundary conditions
 
@@ -245,18 +272,6 @@ and training data on an irregular grid (Chebyshev points). The [Chebyshev points
 {: refdef}  
 
 
-
-{:refdef: style="text-align: center;"}
-![_config.yml]({{ site.baseurl }}/images/e1.png ){: .align-center}
-{: refdef}  
-
-{:refdef: style="text-align: center;"}
-![_config.yml]({{ site.baseurl }}/images/e2.png ){: .align-center}
-{: refdef}  
-
-{:refdef: style="text-align: center;"}
-![_config.yml]({{ site.baseurl }}/images/e3.png ){: .align-center}
-{: refdef}  
 
 ## What's left to do?
 here critique and a small review of the presented methods can be written.
