@@ -84,6 +84,8 @@ Here I link blog posts that I find very helpful in understanding some of the abo
   - [Optimization algorithms](https://towardsdatascience.com/understanding-optimization-algorithms-in-machine-learning-edfdb4df766b) ( and if you are more into reading papers, you might enjoy reading this [survey](https://arxiv.org/pdf/1906.06821.pdf))
 
 ### Graph Neural Networks and Message Passing
+
+<p>  <div style="text-align: justify">
 In their work, Brandstetter et al. argue that Graph Neural Networks and the concept of Message Passing satisfy conditions that are required in numerical solvers and that several previously developed ML based solvers do not satisfy. The most relevant condition for engineering applications is generalisability. Generalisability over different resolutions, topologies, geometries, initial conditions and dimensions can give rise to generic solvers over several application domains. To understand the foundation behind this argument, let's understand the basics of Graph Neural Networks.
 
 Many real data cannot be respresented in a way that can be processed using ANNs (and furhter architectures such as CNNs). However, most data can be described as graphs. Graphs consist of a list of objects with connectios between them. Graph alike structures can be found in many physical problems: 
@@ -93,61 +95,75 @@ Many real data cannot be respresented in a way that can be processed using ANNs 
   - In molecular dynamics the objecs are atoms described by an atom type and connected by relative positions and edge types.  
 
 The objects in a graph are called nodes and the connections are edges. 
+</div> </p>
+  
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/Graph.png){: .align-center}
 {: refdef}  
 
+<p>  <div style="text-align: justify">
 Nodes can have vector attributes and edges can contain several information packed in a vector. Edge information doesn't necessarly have to include computed edges such as distances. It can e.g. include information on neighbouring nodes instead. This gives the flexibility of choosing how many neighbouring nodes can influence a given state. If you now think back about the generalisability assumpution you might notice predicting a state by the state of only it's neighbouring state doesn't necessarly include the notion of a "global geometry/tobology" and thus it enforces generalisability over different topologies and geometries. It also supports the generalisation over different resolutions and discretizations argument: Instead of of predicting states using a fixed amount of data points in a geometry, the state of each node can be predicted using the states of a given number of neighbours and the geometry can still be embedded into the edge attributes.
 
 Now that the data is embedded in graph representations, how do we learn on graphs? The answer to this question is Graph Neural Networks.
+</div> </p>
 
-Graph Neural Networks are built using the Message Passing framework introduced by [Giler et al.](https://arxiv.org/abs/1704.01212). They adopt a graph-in graph-out principle. This means that for graph inputs with nodes, edge and global context information the output is a graph with the same connectivity as the input graph. The idea of message passing boils down to three main steps:
+<p>  <div style="text-align: justify">
+Graph Neural Networks are built using the Message Passing framework introduced by </div> </p> [Giler et al.](https://arxiv.org/abs/1704.01212). <p>  <div style="text-align: justify"> They adopt a graph-in graph-out principle. This means that for graph inputs with nodes, edge and global context information the output is a graph with the same connectivity as the input graph. The idea of message passing boils down to three main steps:
 
   1) For every node of the graph as message is computed for all neighbouring nodes. A messages is a function of the node information, the neighbor information, and the edge between them. This function can be a Multilayer Perceptron.
+</div> </p>
 
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/MP1.png){: .align-center}
 {: refdef}  
 
+<p>  <div style="text-align: justify">
   2) After all mesages are computed each node aggregates the messages it receives from its neighbours. Aggregation is the application of a permutation invariant function. An aggregation function can be e.g. a sum or an average, but is not limited to such simple operations.
- 
- {:refdef: style="text-align: center;"}
-![_config.yml]({{ site.baseurl }}/images/MP2.png){: .align-center}
-{: refdef}  
   
   3) After all messages from neighbours are passed to the current node, the node state is updated. The update is a function of the current node state and the aggregated messages (and possibly other information). The update function is learned using training data and can e.g. be a Feedfowrd Neural Network.
+</div> </p>
 
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/MP3.png){: .align-center}
 {: refdef}  
 
-For more detailed information supported with visual interactive material about Graph Neural Networks you can check "[A Gentle Introduction to Graph Neural Networks](https://distill.pub/2021/gnn-intro/)". W.L. Hamiltons McGill [course on Graph Representation Learning](https://cs.mcgill.ca/~wlh/comp766/files/chapter4_draft_mar29.pdf) also offers a thorough introduction to GNNs and Message Passing. 
-
+<p>  <div style="text-align: justify">
+For more detailed information supported with visual interactive material about Graph Neural Networks you can check </div> </p> "[A Gentle Introduction to Graph Neural Networks](https://distill.pub/2021/gnn-intro/)". <p>  <div style="text-align: justify"> W.L. Hamiltons McGill </div> </p>  [course on Graph Representation Learning](https://cs.mcgill.ca/~wlh/comp766/files/chapter4_draft_mar29.pdf) <p>  <div style="text-align: justify">  also offers a thorough introduction to GNNs and Message Passing. 
+</div> </p>
 
 ## Connecting the dots
 
+<p>  <div style="text-align: justify">
 At this points let's connect the key points we learned so far: In simulations we predict future sttes from current states. Similar to simulation, in Message Passing GNNs the transformation of graphs between different states are learned and future states of graph nodes can be predicted from current states. Let's visualize this analogy:
+</div> </p>
 
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/MP_PDE_Analogy.png){: .align-center}
 {: refdef}  
 
+<p>  <div style="text-align: justify">
 We saw that simulations can be very expensive and motivated the need for methods that accelerate them. Here Machine Learning comes in handy. GNNs learn efficiently on graphs and many physical data can be interpreted into graphs. This synergy results in Message Passing Neural PDEs solvers.
 
 There are two main paradigms that are been applied in using Machine Learning to solve PDEs: Neural Operators and Autoregressive Methods.
+</div> </p>
 
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/NeuralMethods.png){: .align-center}
 {: refdef}  
 
+<p>  <div style="text-align: justify">
 Neural Operators learn predictions from an initial condition to a given timestep t. Neural Operators are trained on example solutions of a given equation and are thus locked to a given equation and do not generalize well. Autoregressive Methods are iterative. They rely on an initial state of a time dependant problem and then iteratively generate solutions from predicted states. In other words, if an Autoregressive Method receives an initial state of a problem and a number of timesteps it generates the prediction at time one from the initial condition, than the prediction at time 2 from the previously made prediction 1 and so forth until n predictions are generated.
+</div> </p>
 
 ## Autoregressive Methods and Instability
-In their paper, [Brandstetter et al.](https://arxiv.org/abs/2202.03376) argue that Autoregressive Methods are hard to train. This is due to their instability. The definition of stability in this context is similar to its definition in numerical analysis: Numerical stability concerns how errors introduced during the execution of an algorithm affect the result. In Autoregressive Neural PDE solvers instability means that prediction error get accumulated through the prediction and that for a growing prediction horizon the error explodes.Due to the latter phenomena predictions for large time periods may not be possible. In the following figure we illustrate how error grows in time for autoregressive methods and the prediction diverges from the solution manifold. 
+<p>  <div style="text-align: justify">
+In their paper, </div> </p> [Brandstetter et al.](https://arxiv.org/abs/2202.03376) <p>  <div style="text-align: justify"> argue that Autoregressive Methods are hard to train. This is due to their instability. The definition of stability in this context is similar to its definition in numerical analysis: Numerical stability concerns how errors introduced during the execution of an algorithm affect the result. In Autoregressive Neural PDE solvers instability means that prediction error get accumulated through the prediction and that for a growing prediction horizon the error explodes.Due to the latter phenomena predictions for large time periods may not be possible. In the following figure we illustrate how error grows in time for autoregressive methods and the prediction diverges from the solution manifold. 
+</div> </p>
 
 {:refdef: style="text-align: center;"}
 ![_config.yml]({{ site.baseurl }}/images/Unstable.png){: .align-center}
 {: refdef}  
+
 
 This phenomena has been shown in many applications and has been addressed in many different ways. For e.g. [Kneifl et al.](https://arxiv.org/pdf/2110.13583.pdf) observed error accumulation in an autoregressive framework. [Liu et al.](https://arxiv.org/pdf/2008.09768.pdf) and [Vlachas et al.](https://www.nature.com/articles/s42256-022-00464-w.pdf?origin=ppub) addressed the  problem of instability in autoregressive methods. However not many publications can be found that address instablity of Message Passing Neural PDE solver. That it what makes the paper we discuss here unique. The main contribution of the authors lays in finding "tricks" to improve the stability and the generalisability of Message Passing Autoregressive methods.
 
